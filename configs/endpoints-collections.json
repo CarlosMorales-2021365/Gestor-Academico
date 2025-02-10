@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "a8b9afa7-e20a-4e46-89d1-3f53fd9489c9",
+		"name": "gestor Academico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41867639"
+	},
+	"item": [
+		{
+			"name": "estudiantes",
+			"item": [
+				{
+					"name": "registro estudiantes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Diego ",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Bercian",
+									"type": "text"
+								},
+								{
+									"key": "carne",
+									"value": "2024899",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Dbercian",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dbercian-2024899@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Usuario/Desktop/deadpool-and-wolverine-trailer-san-valentin.jpg"
+								},
+								{
+									"key": "role",
+									"value": "STUDENT_ROLE",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/studentRegister",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"studentRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar contraseña",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12348765\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/updateStudentPassword/67a6e4005329975407af697c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"updateStudentPassword",
+								"67a6e4005329975407af697c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Taller2\",\r\n    \"surname\":\"Berci\",\r\n    \"carne\":\"1234567\",\r\n    \"username\":\"12Ber\",\r\n    \"email\":\"ber@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/updateStudent/67a6e4005329975407af697c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"updateStudent",
+								"67a6e4005329975407af697c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/deleteStudent/67a6e4005329975407af697c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"deleteStudent",
+								"67a6e4005329975407af697c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"uid\": \"67a5790d4a4a6aeddf580fe9\",\r\n  \"id\": \"67a9453cd25fc574aa595007\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/assingCurso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"assingCurso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver cursos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/student/CursosDelEstudiante/67a6e28d5329975407af696f",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"student",
+								"CursosDelEstudiante",
+								"67a6e28d5329975407af696f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profesores",
+			"item": [
+				{
+					"name": "registro profesores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Darwin",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Coronado",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Dcoronado",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Darwin@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "TEACHER_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Usuario/Desktop/deadpool-and-wolverine-trailer-san-valentin.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/teacherRegister",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"teacherRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar contraseña",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12348765\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/updateTeacherPassword/67a6c013376ba61b8e868f03",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"updateTeacherPassword",
+								"67a6c013376ba61b8e868f03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acctualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Taller2\",\r\n    \"surname\":\"Berci\",\r\n    \"username\":\"12Ber\",\r\n    \"email\":\"ber@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/updateTeacher/67a6c013376ba61b8e868f03",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"updateTeacher",
+								"67a6c013376ba61b8e868f03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/teacher/deleteTeacher/67a6c013376ba61b8e868f03",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"teacher",
+								"deleteTeacher",
+								"67a6c013376ba61b8e868f03"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cursos",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Etica\",\r\n    \"description\":\"Curso en donde veremos geografia, y un poco de historia \",\r\n    \"start\":\"07:05\",\r\n    \"end\":\"08:05\",\r\n    \"teacher\":\"67a944ced25fc574aa595004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/createCurso",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"curso",
+								"createCurso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"start\":\"09:15\",\r\n    \"end\":\"10:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/updateCurso/67a8fed464d67e5de0cbf0bb",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"curso",
+								"updateCurso",
+								"67a8fed464d67e5de0cbf0bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/deleteCurso/67a956d8da19132bb3f38708",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"curso",
+								"deleteCurso",
+								"67a956d8da19132bb3f38708"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/curso/67a6c080fb0cf2f22ca00ec1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"curso",
+								"67a6c080fb0cf2f22ca00ec1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Zodiacal\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/gestorAcademico/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"gestorAcademico",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
