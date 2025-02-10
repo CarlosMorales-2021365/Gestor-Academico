@@ -1,6 +1,6 @@
 # Gestor-Academico
 
-Esta API esta diselñada para gestionar a los estudiantes, profesores y los cursos de una institucion educativa. INcluye funcionalidades para crea actualizar cursos asi comom permitir que los alumnos visualicen los cursos a los que estan inscritos.
+Esta API esta diseñada para gestionar a los estudiantes, profesores y los cursos de una institucion educativa. Incluye funcionalidades para crea actualizar cursos asi comom permitir que los alumnos visualicen los cursos a los que estan inscritos.
 
 ## Variables de Entorno
 
